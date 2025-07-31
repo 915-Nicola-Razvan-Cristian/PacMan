@@ -7,7 +7,6 @@ A simple PacMan clone written in Java using Swing.
 - Classic PacMan gameplay
 - Customizable map loaded from a text file
 - Basic ghost AI
-- Score tracking
 
 ## Getting Started
 
