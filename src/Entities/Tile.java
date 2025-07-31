@@ -8,9 +8,6 @@ public class Tile {
     public Image image;
     public int size = 32; // 32*32 pixels by default
 
-    protected int startX;
-    protected int startY;
-
     public Tile(int x, int y, Image image, int size) {
         this.x = x;
         this.y = y;
@@ -22,8 +19,6 @@ public class Tile {
         this.x = x;
         this.y = y;
         this.image = image;
-        this.startX = x;
-        this.startY = y;
     }
 
     public static boolean collision(Tile a, Tile b) {

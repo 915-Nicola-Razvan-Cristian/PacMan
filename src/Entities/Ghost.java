@@ -4,8 +4,11 @@ import java.awt.Image;
 
 public class Ghost extends PacMan {
 
-    public Ghost(int x, int y, Image image) {
+    public char name; // b = blue, o = orange, p = pink, r = red
+
+    public Ghost(int x, int y, Image image, char name) {
         super(x, y, image);
+        this.name = name;
     }
 
     public void updateDirection(char newDirection) {
