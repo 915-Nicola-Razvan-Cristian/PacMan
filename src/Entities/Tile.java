@@ -1,16 +1,36 @@
 package Entities;
 
-public class Tile {
-    private int x;
-    private int y;
-    private boolean isWall;
-    private boolean isFood;
+import java.awt.Image;
 
-    public Tile(int x, int y, boolean isWall, boolean isFood) {
+public class Tile {
+    protected int x;
+    protected int y;
+    public Image image;
+    public int size = 32; // 32*32 pixels by default
+
+    protected int startX;
+    protected int startY;
+
+    public Tile(int x, int y, Image image, int size) {
         this.x = x;
         this.y = y;
-        this.isWall = isWall;
-        this.isFood = isFood;
+        this.image = image;
+        this.size = size;
+    }
+
+    public Tile(int x, int y, Image image) {
+        this.x = x;
+        this.y = y;
+        this.image = image;
+        this.startX = x;
+        this.startY = y;
+    }
+
+    public static boolean collision(Tile a, Tile b) {
+        return a.getX() < b.getX() + b.size &&
+                a.getX() + a.size > b.getX() &&
+                a.getY() < b.getY() + b.size &&
+                a.getY() + a.size > b.getY();
     }
 
     public int getX() {
@@ -21,11 +41,11 @@ public class Tile {
         return y;
     }
 
-    public boolean isWall() {
-        return isWall;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public boolean isFood() {
-        return isFood;
+    public void setY(int y) {
+        this.y = y;
     }
 }
