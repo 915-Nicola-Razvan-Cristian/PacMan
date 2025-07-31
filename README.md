@@ -1,18 +1,34 @@
+# PacMan Java
+
+A simple PacMan clone written in Java using Swing.
+
+## Features
+
+- Classic PacMan gameplay
+- Customizable map loaded from a text file
+- Basic ghost AI
+- Score tracking
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Prerequisites
 
-## Folder Structure
+- Java 8 or higher
+- A Java IDE (e.g., IntelliJ IDEA, Eclipse, VS Code) or command line tools
 
-The workspace contains two folders by default, where:
+### Running the Game
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+1. **Clone the repository**  
+   Download or clone this repository to your local machine.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+2. **Add a map file**  
+   Place your map text file in `src/assets/map.txt`.  
+   The map should use characters to represent walls, pellets, PacMan, ghosts, etc.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+3. **Compile and run**  
+   From the root directory, run:
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+   ```sh
+   javac -d bin src/*.java
+   java -cp bin App
+   ```
